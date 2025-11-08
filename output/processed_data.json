@@ -1,0 +1,459 @@
+[
+  {
+    "id": "sample1",
+    "source": "Reddit",
+    "subreddit": "security",
+    "title": "New critical vulnerability discovered in OpenSSL",
+    "author": "security_researcher",
+    "url": "https://www.reddit.com/r/security/sample1",
+    "score": 245,
+    "num_comments": 67,
+    "created": "2025-11-08T16:23:33.349Z",
+    "selftext": "A new critical vulnerability has been discovered...",
+    "type": "forum_post",
+    "tags": [
+      "security",
+      "public_forum",
+      "security"
+    ]
+  },
+  {
+    "id": "sample2",
+    "source": "Reddit",
+    "subreddit": "netsec",
+    "title": "Best practices for securing cloud infrastructure",
+    "author": "cloud_expert",
+    "url": "https://www.reddit.com/r/netsec/sample2",
+    "score": 189,
+    "num_comments": 43,
+    "created": "2025-11-08T16:23:33.349Z",
+    "selftext": "Here are some best practices for cloud security...",
+    "type": "forum_post",
+    "tags": [
+      "security",
+      "public_forum",
+      "netsec"
+    ]
+  },
+  {
+    "id": "000webhost",
+    "source": "HaveIBeenPwned",
+    "name": "000webhost",
+    "title": "000webhost",
+    "domain": "000webhost.com",
+    "breach_date": "2015-03-01",
+    "added_date": "2015-10-26T23:35:45Z",
+    "modified_date": "2017-12-10T21:44:27Z",
+    "pwn_count": 14936670,
+    "description": "In approximately March 2015, the free web hosting provider <a href=\"http://www.troyhunt.com/2015/10/breaches-traders-plain-text-passwords.html\" target=\"_blank\" rel=\"noopener\">000webhost suffered a major data breach</a> that exposed almost 15 million customer records. The data was sold and traded before 000webhost was alerted in October. The breach included names, email addresses and plain text passwords.",
+    "data_classes": [
+      "Email addresses",
+      "IP addresses",
+      "Names",
+      "Passwords"
+    ],
+    "is_verified": true,
+    "is_sensitive": false,
+    "is_retired": false,
+    "logo_path": "https://logos.haveibeenpwned.com/000webhost.png",
+    "type": "breach_metadata",
+    "tags": [
+      "breach_info",
+      "public_database",
+      "metadata_only"
+    ]
+  },
+  {
+    "id": "123RF",
+    "source": "HaveIBeenPwned",
+    "name": "123RF",
+    "title": "123RF",
+    "domain": "123rf.com",
+    "breach_date": "2020-03-22",
+    "added_date": "2020-11-15T00:59:50Z",
+    "modified_date": "2020-11-15T01:07:10Z",
+    "pwn_count": 8661578,
+    "description": "In March 2020, the stock photo site <a href=\"https://www.bleepingcomputer.com/news/security/popular-stock-photo-service-hit-by-data-breach-83m-records-for-sale/\" target=\"_blank\" rel=\"noopener\">123RF suffered a data breach</a> which impacted over 8 million subscribers and was subsequently sold online. The breach included email, IP and physical addresses, names, phone numbers and passwords stored as MD5 hashes. The data was provided to HIBP by <a href=\"https://dehashed.com/\" target=\"_blank\" rel=\"noopener\">dehashed.com</a>.",
+    "data_classes": [
+      "Email addresses",
+      "IP addresses",
+      "Names",
+      "Passwords",
+      "Phone numbers",
+      "Physical addresses",
+      "Usernames"
+    ],
+    "is_verified": true,
+    "is_sensitive": false,
+    "is_retired": false,
+    "logo_path": "https://logos.haveibeenpwned.com/123RF.png",
+    "type": "breach_metadata",
+    "tags": [
+      "breach_info",
+      "public_database",
+      "metadata_only"
+    ]
+  },
+  {
+    "id": "126",
+    "source": "HaveIBeenPwned",
+    "name": "126",
+    "title": "126",
+    "domain": "126.com",
+    "breach_date": "2012-01-01",
+    "added_date": "2016-10-08T07:46:05Z",
+    "modified_date": "2016-10-08T07:46:05Z",
+    "pwn_count": 6414191,
+    "description": "In approximately 2012, it's alleged that the Chinese email service known as <a href=\"http://126.com\" target=\"_blank\" rel=\"noopener\">126</a> suffered a data breach that impacted 6.4 million subscribers. Whilst there is evidence that the data is legitimate, due to the difficulty of emphatically verifying the Chinese breach it has been flagged as \"unverified\". The data in the breach contains email addresses and plain text passwords. <a href=\"https://www.troyhunt.com/handling-chinese-data-breaches-in-have-i-been-pwned/\" target=\"_blank\" rel=\"noopener\">Read more about Chinese data breaches in Have I Been Pwned.</a>",
+    "data_classes": [
+      "Email addresses",
+      "Passwords"
+    ],
+    "is_verified": false,
+    "is_sensitive": false,
+    "is_retired": false,
+    "logo_path": "https://logos.haveibeenpwned.com/126.png",
+    "type": "breach_metadata",
+    "tags": [
+      "breach_info",
+      "public_database",
+      "metadata_only"
+    ]
+  },
+  {
+    "id": "17Media",
+    "source": "HaveIBeenPwned",
+    "name": "17Media",
+    "title": "17",
+    "domain": "17app.co",
+    "breach_date": "2016-04-19",
+    "added_date": "2016-07-08T01:55:03Z",
+    "modified_date": "2016-07-08T01:55:03Z",
+    "pwn_count": 4009640,
+    "description": "In April 2016, customer data obtained from the streaming app known as \"17\" <a href=\"http://motherboard.vice.com/read/another-day-another-hack-millions-of-user-accounts-for-streaming-app-17\" target=\"_blank\" rel=\"noopener\">appeared listed for sale on a Tor hidden service marketplace</a>. The data contained over 4 million unique email addresses along with IP addresses, usernames and passwords stored as unsalted MD5 hashes.",
+    "data_classes": [
+      "Device information",
+      "Email addresses",
+      "IP addresses",
+      "Passwords",
+      "Usernames"
+    ],
+    "is_verified": true,
+    "is_sensitive": false,
+    "is_retired": false,
+    "logo_path": "https://logos.haveibeenpwned.com/17Media.png",
+    "type": "breach_metadata",
+    "tags": [
+      "breach_info",
+      "public_database",
+      "metadata_only"
+    ]
+  },
+  {
+    "id": "17173",
+    "source": "HaveIBeenPwned",
+    "name": "17173",
+    "title": "17173",
+    "domain": "17173.com",
+    "breach_date": "2011-12-28",
+    "added_date": "2018-04-28T04:53:15Z",
+    "modified_date": "2018-04-28T04:53:15Z",
+    "pwn_count": 7485802,
+    "description": "In late 2011, <a href=\"https://news.softpedia.com/news/China-Investigates-Hacking-Operations-That-Exposed-100-Million-Users-244312.shtml\" target=\"_blank\" rel=\"noopener\">a series of data breaches in China affected up to 100 million users</a>, including 7.5 million from the gaming site known as 17173. Whilst there is evidence that the data is legitimate, due to the difficulty of emphatically verifying the Chinese breach it has been flagged as \"unverified\". The data in the breach contains usernames, email addresses and salted MD5 password hashes and was provided with support from <a href=\"https://dehashed.com/\" target=\"_blank\" rel=\"noopener\">dehashed.com</a>. <a href=\"https://www.troyhunt.com/handling-chinese-data-breaches-in-have-i-been-pwned/\" target=\"_blank\" rel=\"noopener\">Read more about Chinese data breaches in Have I Been Pwned.</a>",
+    "data_classes": [
+      "Email addresses",
+      "Passwords",
+      "Usernames"
+    ],
+    "is_verified": false,
+    "is_sensitive": false,
+    "is_retired": false,
+    "logo_path": "https://logos.haveibeenpwned.com/17173.png",
+    "type": "breach_metadata",
+    "tags": [
+      "breach_info",
+      "public_database",
+      "metadata_only"
+    ]
+  },
+  {
+    "id": "1win",
+    "source": "HaveIBeenPwned",
+    "name": "1win",
+    "title": "1win",
+    "domain": "1win.com",
+    "breach_date": "2024-11-02",
+    "added_date": "2025-02-03T17:37:55Z",
+    "modified_date": "2025-02-06T04:30:27Z",
+    "pwn_count": 96166543,
+    "description": "In November 2024, <a href=\"https://cryptoadventure.com/1win-hack-leaks-data-of-100-million-users-can-gamblefi-save-the-day/\" target=\"_blank\" rel=\"noopener\">the online betting platform 1win suffered a data breach that exposed 96M users</a>. The exposed data included email and IP addresses, phone numbers, dates of birth, country and SHA-256 password hashes.",
+    "data_classes": [
+      "Dates of birth",
+      "Email addresses",
+      "Geographic locations",
+      "IP addresses",
+      "Passwords",
+      "Phone numbers"
+    ],
+    "is_verified": true,
+    "is_sensitive": false,
+    "is_retired": false,
+    "logo_path": "https://logos.haveibeenpwned.com/1win.png",
+    "type": "breach_metadata",
+    "tags": [
+      "breach_info",
+      "public_database",
+      "metadata_only"
+    ]
+  },
+  {
+    "id": "2844Breaches",
+    "source": "HaveIBeenPwned",
+    "name": "2844Breaches",
+    "title": "2,844 Separate Data Breaches",
+    "domain": "",
+    "breach_date": "2018-02-19",
+    "added_date": "2018-02-26T10:06:02Z",
+    "modified_date": "2018-02-26T10:06:02Z",
+    "pwn_count": 80115532,
+    "description": "In February 2018, <a href=\"https://www.troyhunt.com/ive-just-added-2844-new-data-breaches-with-80m-records-to-have-i-been-pwned/\" target=\"_blank\" rel=\"noopener\">a massive collection of almost 3,000 alleged data breaches was found online</a>. Whilst some of the data had previously been seen in Have I Been Pwned, 2,844 of the files consisting of more than 80 million unique email addresses had not previously been seen. Each file contained both an email address and plain text password and were consequently loaded as a single \"unverified\" data breach.",
+    "data_classes": [
+      "Email addresses",
+      "Passwords"
+    ],
+    "is_verified": false,
+    "is_sensitive": false,
+    "is_retired": false,
+    "logo_path": "https://logos.haveibeenpwned.com/List.png",
+    "type": "breach_metadata",
+    "tags": [
+      "breach_info",
+      "public_database",
+      "metadata_only"
+    ]
+  },
+  {
+    "id": "2fast4u",
+    "source": "HaveIBeenPwned",
+    "name": "2fast4u",
+    "title": "2fast4u",
+    "domain": "2fast4u.be",
+    "breach_date": "2017-12-20",
+    "added_date": "2018-01-07T08:19:39Z",
+    "modified_date": "2018-01-07T08:19:39Z",
+    "pwn_count": 17706,
+    "description": "In December 2017, the Belgian motorcycle forum <a href=\"https://www.2fast4u.be\" target=\"_blank\" rel=\"noopener\">2fast4u</a> discovered a data breach of their system. The breach of the vBulletin message board impacted over 17k individual users and exposed email addresses, usersnames and salted MD5 passwords.",
+    "data_classes": [
+      "Email addresses",
+      "Passwords",
+      "Usernames"
+    ],
+    "is_verified": true,
+    "is_sensitive": false,
+    "is_retired": false,
+    "logo_path": "https://logos.haveibeenpwned.com/2fast4u.png",
+    "type": "breach_metadata",
+    "tags": [
+      "breach_info",
+      "public_database",
+      "metadata_only"
+    ]
+  },
+  {
+    "id": "500px",
+    "source": "HaveIBeenPwned",
+    "name": "500px",
+    "title": "500px",
+    "domain": "500px.com",
+    "breach_date": "2018-07-05",
+    "added_date": "2019-03-25T08:01:09Z",
+    "modified_date": "2019-03-25T08:01:09Z",
+    "pwn_count": 14867999,
+    "description": "In mid-2018, the online photography community <a href=\"https://support.500px.com/hc/en-us/articles/360017752493-Security-Issue-February-2019-FAQ\" target=\"_blank\" rel=\"noopener\">500px suffered a data breach</a>. The incident exposed almost 15 million unique email addresses alongside names, usernames, genders, dates of birth and either an MD5 or bcrypt password hash. In 2019, <a href=\"https://www.theregister.co.uk/2019/02/11/620_million_hacked_accounts_dark_web/\" target=\"_blank\" rel=\"noopener\">the data appeared listed for sale on a dark web marketplace</a> (along with several other large breaches) and subsequently began circulating more broadly.",
+    "data_classes": [
+      "Dates of birth",
+      "Email addresses",
+      "Genders",
+      "Geographic locations",
+      "Names",
+      "Passwords",
+      "Usernames"
+    ],
+    "is_verified": true,
+    "is_sensitive": false,
+    "is_retired": false,
+    "logo_path": "https://logos.haveibeenpwned.com/500px.png",
+    "type": "breach_metadata",
+    "tags": [
+      "breach_info",
+      "public_database",
+      "metadata_only"
+    ]
+  },
+  {
+    "id": "7k7k",
+    "source": "HaveIBeenPwned",
+    "name": "7k7k",
+    "title": "7k7k",
+    "domain": "7k7k.com",
+    "breach_date": "2011-01-01",
+    "added_date": "2017-09-26T21:54:01Z",
+    "modified_date": "2017-09-26T21:54:01Z",
+    "pwn_count": 9121434,
+    "description": "In approximately 2011, it's alleged that the Chinese gaming site known as <a href=\"http://www.7k7k.com\" target=\"_blank\" rel=\"noopener\">7k7k</a> suffered a data breach that impacted 9.1 million subscribers. Whilst there is evidence that the data is legitimate, due to the difficulty of emphatically verifying the Chinese breach it has been flagged as \"unverified\". The data in the breach contains usernames, email addresses and plain text passwords. <a href=\"https://www.troyhunt.com/handling-chinese-data-breaches-in-have-i-been-pwned/\" target=\"_blank\" rel=\"noopener\">Read more about Chinese data breaches in Have I Been Pwned.</a>",
+    "data_classes": [
+      "Email addresses",
+      "Passwords",
+      "Usernames"
+    ],
+    "is_verified": false,
+    "is_sensitive": false,
+    "is_retired": false,
+    "logo_path": "https://logos.haveibeenpwned.com/7k7k.png",
+    "type": "breach_metadata",
+    "tags": [
+      "breach_info",
+      "public_database",
+      "metadata_only"
+    ]
+  },
+  {
+    "id": "8fit",
+    "source": "HaveIBeenPwned",
+    "name": "8fit",
+    "title": "8fit",
+    "domain": "8fit.com",
+    "breach_date": "2018-07-01",
+    "added_date": "2019-03-21T18:50:00Z",
+    "modified_date": "2019-03-21T18:50:00Z",
+    "pwn_count": 15025407,
+    "description": "In July 2018, the health and fitness service <a href=\"https://8fit.zendesk.com/hc/en-us/articles/360017746394-Notice\" target=\"_blank\" rel=\"noopener\">8fit suffered a data breach</a>. The data subsequently appeared for sale on a dark web marketplace in February 2019 and included over 15M unique email addresses alongside names, genders, IP addresses and passwords stored as bcrypt hashes. The data was provided to HIBP by <a href=\"https://dehashed.com/\" target=\"_blank\" rel=\"noopener\">dehashed.com</a>.",
+    "data_classes": [
+      "Email addresses",
+      "Genders",
+      "Geographic locations",
+      "IP addresses",
+      "Names",
+      "Passwords"
+    ],
+    "is_verified": true,
+    "is_sensitive": false,
+    "is_retired": false,
+    "logo_path": "https://logos.haveibeenpwned.com/8fit.png",
+    "type": "breach_metadata",
+    "tags": [
+      "breach_info",
+      "public_database",
+      "metadata_only"
+    ]
+  },
+  {
+    "id": "8tracks",
+    "source": "HaveIBeenPwned",
+    "name": "8tracks",
+    "title": "8tracks",
+    "domain": "8tracks.com",
+    "breach_date": "2017-06-27",
+    "added_date": "2018-02-16T07:09:30Z",
+    "modified_date": "2019-08-25T08:52:21Z",
+    "pwn_count": 17979961,
+    "description": "In June 2017, the online playlists service known as <a href=\"https://blog.8tracks.com/2017/06/27/password-security-alert/\" target=\"_blank\" rel=\"noopener\">8Tracks suffered a data breach</a> which impacted 18 million accounts. In their disclosure, 8Tracks advised that \"the vector for the attack was an employee’s GitHub account, which was not secured using two-factor authentication\". Salted SHA-1 password hashes for users who <em>didn't</em> sign up with either Google or Facebook authentication were also included. The data was provided to HIBP by whitehat security researcher and data analyst Adam Davies and contained almost 8 million unique email addresses. The complete set of 18M records was later provided by Ji**********@protonmail.com and updated in HIBP accordingly.",
+    "data_classes": [
+      "Email addresses",
+      "Passwords"
+    ],
+    "is_verified": true,
+    "is_sensitive": false,
+    "is_retired": false,
+    "logo_path": "https://logos.haveibeenpwned.com/8tracks.png",
+    "type": "breach_metadata",
+    "tags": [
+      "breach_info",
+      "public_database",
+      "metadata_only"
+    ]
+  },
+  {
+    "id": "9Lives",
+    "source": "HaveIBeenPwned",
+    "name": "9Lives",
+    "title": "9Lives",
+    "domain": "9lives.be",
+    "breach_date": "2014-10-01",
+    "added_date": "2025-02-02T02:04:44Z",
+    "modified_date": "2025-02-06T04:29:24Z",
+    "pwn_count": 109515,
+    "description": "In October 2014, the (now defunct) Belgian gaming news forum 9Lives suffered a data breach <a href=\"https://cybernews.com/security/billions-passwords-credentials-leaked-mother-of-all-breaches/\" target=\"_blank\" rel=\"noopener\">that was later redistributed as part of a larger corpus of data</a>. The breach exposed 109k unique email addresses along with usernames and salted MD5 password hashes.",
+    "data_classes": [
+      "Email addresses",
+      "Passwords",
+      "Usernames"
+    ],
+    "is_verified": true,
+    "is_sensitive": false,
+    "is_retired": false,
+    "logo_path": "https://logos.haveibeenpwned.com/9Lives.png",
+    "type": "breach_metadata",
+    "tags": [
+      "breach_info",
+      "public_database",
+      "metadata_only"
+    ]
+  },
+  {
+    "id": "Abandonia",
+    "source": "HaveIBeenPwned",
+    "name": "Abandonia",
+    "title": "Abandonia (2015)",
+    "domain": "abandonia.com",
+    "breach_date": "2015-11-01",
+    "added_date": "2017-06-05T05:56:47Z",
+    "modified_date": "2022-12-07T05:56:07Z",
+    "pwn_count": 776125,
+    "description": "In November 2015, the gaming website dedicated to classic DOS games <a href=\"http://www.abandonia.com\" target=\"_blank\" rel=\"noopener\">Abandonia</a> suffered a data breach resulting in the exposure of 776k unique user records. The data contained email and IP addresses, usernames and salted MD5 hashes of passwords.",
+    "data_classes": [
+      "Email addresses",
+      "IP addresses",
+      "Passwords",
+      "Usernames"
+    ],
+    "is_verified": true,
+    "is_sensitive": false,
+    "is_retired": false,
+    "logo_path": "https://logos.haveibeenpwned.com/Abandonia.png",
+    "type": "breach_metadata",
+    "tags": [
+      "breach_info",
+      "public_database",
+      "metadata_only"
+    ]
+  },
+  {
+    "id": "Abandonia2022",
+    "source": "HaveIBeenPwned",
+    "name": "Abandonia2022",
+    "title": "Abandonia (2022)",
+    "domain": "abandonia.com",
+    "breach_date": "2022-11-15",
+    "added_date": "2022-12-07T06:04:17Z",
+    "modified_date": "2022-12-11T12:25:07Z",
+    "pwn_count": 919790,
+    "description": "In November 2022, the gaming website dedicated to classic DOS games <a href=\"https://twitter.com/FalconFeedsio/status/1594670215471792130\" target=\"_blank\" rel=\"noopener\">Abandonia</a> suffered a data breach resulting in the exposure of 920k unique user records. This breach was in addition to another one 7 years earlier in 2015. The data contained email and IP addresses, usernames and salted MD5 hashes of passwords.",
+    "data_classes": [
+      "Email addresses",
+      "IP addresses",
+      "Passwords",
+      "Usernames"
+    ],
+    "is_verified": true,
+    "is_sensitive": false,
+    "is_retired": false,
+    "logo_path": "https://logos.haveibeenpwned.com/Abandonia.png",
+    "type": "breach_metadata",
+    "tags": [
+      "breach_info",
+      "public_database",
+      "metadata_only"
+    ]
+  }
+]

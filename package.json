@@ -1,0 +1,26 @@
+{
+  "name": "legal-data-acquisition-demo",
+  "version": "1.0.0",
+  "description": "Legal data scraping and processing demonstration with PII detection",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "demo": "node demo.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "data-scraping",
+    "web-scraping",
+    "data-acquisition",
+    "pii-detection",
+    "deduplication"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.2",
+    "cheerio": "^1.0.0-rc.12",
+    "puppeteer": "^21.6.0",
+    "dotenv": "^16.3.1"
+  }
+}
