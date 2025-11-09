@@ -1,8 +1,3 @@
-/**
- * Test Script - Demonstrates all system capabilities
- * Run this to test the system without making actual API calls
- */
-
 const fs = require("fs").promises;
 const { detectAndMaskPII } = require("./utils/pii-detector");
 const { deduplicateData } = require("./utils/deduplicator");
@@ -11,7 +6,6 @@ const { generateReport } = require("./utils/report-generator");
 async function runDemo() {
   console.log("=== DEMO MODE - Testing System Capabilities ===\n");
 
-  // Sample data with PII for testing
   const sampleData = [
     {
       id: 1,
