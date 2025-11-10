@@ -1,35 +1,17 @@
-/**
- * Data Deduplication Utility
- * Removes duplicate entries based on content similarity
- */
-
 const crypto = require("crypto");
 
-/**
- * Generate hash for an object to identify duplicates
- */
 function generateHash(obj) {
-  // Create a normalized string representation
   const normalized = JSON.stringify(obj, Object.keys(obj).sort());
   return crypto.createHash("md5").update(normalized).digest("hex");
 }
 
-/**
- * Generate hash from specific fields
- */
 function generateFieldHash(obj, fields) {
   const values = fields.map((field) => obj[field] || "").join("|");
   return crypto.createHash("md5").update(values).digest("hex");
 }
 
-/**
- * Deduplicate array of objects
- */
 function deduplicateData(data, options = {}) {
-  const {
-    fields = null, // Specific fields to check for duplicates
-    useFullObject = true, // Use entire object for comparison
-  } = options;
+  const { fields = null, useFullObject = true } = options;
 
   if (!Array.isArray(data) || data.length === 0) {
     return { deduplicated: data, removedCount: 0 };
@@ -67,9 +49,6 @@ function deduplicateData(data, options = {}) {
   };
 }
 
-/**
- * Find similar items (fuzzy matching)
- */
 function findSimilarItems(data, threshold = 0.8) {
   const similarities = [];
 
@@ -89,14 +68,10 @@ function findSimilarItems(data, threshold = 0.8) {
   return similarities;
 }
 
-/**
- * Calculate similarity between two objects (simple implementation)
- */
 function calculateSimilarity(obj1, obj2) {
   const str1 = JSON.stringify(obj1).toLowerCase();
   const str2 = JSON.stringify(obj2).toLowerCase();
 
-  // Simple character-based similarity
   const longer = str1.length > str2.length ? str1 : str2;
   const shorter = str1.length > str2.length ? str2 : str1;
 
@@ -106,9 +81,6 @@ function calculateSimilarity(obj1, obj2) {
   return (longer.length - editDistance) / longer.length;
 }
 
-/**
- * Calculate Levenshtein distance
- */
 function levenshteinDistance(str1, str2) {
   const matrix = [];
 

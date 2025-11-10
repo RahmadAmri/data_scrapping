@@ -49,13 +49,11 @@ async function runDemo() {
   console.log("   - 1 duplicate entry");
   console.log("   - Multiple PII instances\n");
 
-  // Test 1: Deduplication
   console.log("🔄 Testing Deduplication...");
   const { deduplicated, removedCount } = deduplicateData(sampleData);
   console.log(`✓ Removed ${removedCount} duplicates`);
   console.log(`✓ Unique records: ${deduplicated.length}\n`);
 
-  // Test 2: PII Detection
   console.log("🔒 Testing PII Detection...");
   let piiCount = 0;
   const processedData = deduplicated.map((item) => {
@@ -68,13 +66,11 @@ async function runDemo() {
   });
   console.log(`\n✓ Total records with PII: ${piiCount}\n`);
 
-  // Show before/after example
   console.log("📝 PII Masking Example:");
   console.log("  Before:", sampleData[0].content);
   console.log("  After: ", processedData[0].content);
   console.log("");
 
-  // Test 3: Report Generation
   console.log("📄 Testing Report Generation...");
 
   await fs.mkdir("./output", { recursive: true });
@@ -106,14 +102,12 @@ async function runDemo() {
   const reportPath = await generateReport(summary, processedData);
   console.log(`✓ Report generated: ${reportPath}\n`);
 
-  // Save processed data
   await fs.writeFile(
     "./output/demo_processed_data.json",
     JSON.stringify(processedData, null, 2)
   );
   console.log("✓ Processed data saved: ./output/demo_processed_data.json\n");
 
-  // Summary
   console.log("=".repeat(50));
   console.log("DEMO SUMMARY");
   console.log("=".repeat(50));
@@ -129,7 +123,6 @@ async function runDemo() {
   console.log("\n💡 To run with real data, use: npm start\n");
 }
 
-// Run demo
 if (require.main === module) {
   runDemo().catch(console.error);
 }

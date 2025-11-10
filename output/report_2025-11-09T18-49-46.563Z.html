@@ -1,17 +1,10 @@
-const fs = require("fs").promises;
-const path = require("path");
 
-async function generateReport(summary, data) {
-  const timestamp = new Date().toISOString().replace(/:/g, "-");
-  const reportPath = `./output/report_${timestamp}.html`;
-
-  const html = `
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Acquisition Report - ${new Date().toLocaleString()}</title>
+    <title>Data Acquisition Report - 11/10/2025, 1:49:46 AM</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -42,25 +35,25 @@ async function generateReport(summary, data) {
             <div class="text-5xl mb-4">🔍</div>
             <h1 class="text-3xl md:text-5xl font-bold mb-3">Data Acquisition Report</h1>
             <p class="text-lg md:text-xl opacity-90 mb-2">Legal Public Source Data Collection</p>
-            <p class="text-sm md:text-base opacity-75">Generated: ${new Date().toLocaleString()}</p>
+            <p class="text-sm md:text-base opacity-75">Generated: 11/10/2025, 1:49:46 AM</p>
         </div>
 
         <!-- Summary Stats -->
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 p-6 md:p-10 bg-gray-50">
             <div class="bg-white p-6 rounded-xl text-center shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                <div class="text-4xl md:text-5xl font-bold text-primary mb-2">${summary.sources.length}</div>
+                <div class="text-4xl md:text-5xl font-bold text-primary mb-2">2</div>
                 <div class="text-xs md:text-sm text-gray-600 uppercase tracking-wider font-semibold">Sources</div>
             </div>
             <div class="bg-white p-6 rounded-xl text-center shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                <div class="text-4xl md:text-5xl font-bold text-primary mb-2">${summary.totalRecords}</div>
+                <div class="text-4xl md:text-5xl font-bold text-primary mb-2">5</div>
                 <div class="text-xs md:text-sm text-gray-600 uppercase tracking-wider font-semibold">Records Collected</div>
             </div>
             <div class="bg-white p-6 rounded-xl text-center shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                <div class="text-4xl md:text-5xl font-bold text-primary mb-2">${summary.duplicatesRemoved}</div>
+                <div class="text-4xl md:text-5xl font-bold text-primary mb-2">0</div>
                 <div class="text-xs md:text-sm text-gray-600 uppercase tracking-wider font-semibold">Duplicates Removed</div>
             </div>
             <div class="bg-white p-6 rounded-xl text-center shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                <div class="text-4xl md:text-5xl font-bold text-primary mb-2">${summary.piiDetected}</div>
+                <div class="text-4xl md:text-5xl font-bold text-primary mb-2">4</div>
                 <div class="text-xs md:text-sm text-gray-600 uppercase tracking-wider font-semibold">PII Detected & Masked</div>
             </div>
         </div>
@@ -86,46 +79,61 @@ async function generateReport(summary, data) {
                 <span class="mr-3">📡</span>
                 Data Sources
             </h2>
-            ${summary.sources
-              .map(
-                (source, idx) => `
+            
                 <div class="bg-gray-50 p-6 md:p-8 my-6 rounded-xl border-l-4 border-primary shadow-sm hover:shadow-md transition-shadow">
                     <h3 class="text-xl md:text-2xl font-bold text-primary mb-4">
-                        Source ${idx + 1}: ${source.name}
+                        Source 1: Reddit - r/security
                     </h3>
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-4 my-4">
                         <div class="flex items-center gap-2">
                             <span class="font-bold text-gray-700">Type:</span>
-                            <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-semibold">${source.type}</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-semibold">Public Forum</span>
                         </div>
                         <div class="flex items-center gap-2">
                             <span class="font-bold text-gray-700">Records:</span>
-                            <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-semibold">${
-                              source.recordsCollected
-                            }</span>
+                            <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-semibold">3</span>
                         </div>
                         <div class="flex items-center gap-2">
                             <span class="font-bold text-gray-700">URL:</span>
-                            <a href="${source.url}" target="_blank" class="text-primary hover:text-secondary underline text-sm break-all">${
-                  source.url
-                }</a>
+                            <a href="https://www.reddit.com/r/security/" target="_blank" class="text-primary hover:text-secondary underline text-sm break-all">https://www.reddit.com/r/security/</a>
                         </div>
                     </div>
-                    ${
-                      source.screenshot
-                        ? `
+                    
                         <div class="mt-4 rounded-lg overflow-hidden border border-gray-300">
-                            <img src="${source.screenshot}" alt="Screenshot of ${source.name}" 
+                            <img src="screenshots/demo_reddit.png" alt="Screenshot of Reddit - r/security" 
                                  class="w-full h-auto" 
-                                 onerror="this.parentElement.innerHTML='<p class=\\'p-6 text-center text-gray-500\\'>📸 Screenshot not available</p>'">
+                                 onerror="this.parentElement.innerHTML='<p class=\'p-6 text-center text-gray-500\'>📸 Screenshot not available</p>'">
                         </div>
-                    `
-                        : '<p class="text-gray-500 mt-3 text-sm">📸 Screenshot: Captured during scraping session</p>'
-                    }
+                    
                 </div>
-            `
-              )
-              .join("")}
+            
+                <div class="bg-gray-50 p-6 md:p-8 my-6 rounded-xl border-l-4 border-primary shadow-sm hover:shadow-md transition-shadow">
+                    <h3 class="text-xl md:text-2xl font-bold text-primary mb-4">
+                        Source 2: HaveIBeenPwned
+                    </h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 my-4">
+                        <div class="flex items-center gap-2">
+                            <span class="font-bold text-gray-700">Type:</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-semibold">Public Breach Database</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="font-bold text-gray-700">Records:</span>
+                            <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-semibold">2</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="font-bold text-gray-700">URL:</span>
+                            <a href="https://haveibeenpwned.com/" target="_blank" class="text-primary hover:text-secondary underline text-sm break-all">https://haveibeenpwned.com/</a>
+                        </div>
+                    </div>
+                    
+                        <div class="mt-4 rounded-lg overflow-hidden border border-gray-300">
+                            <img src="screenshots/demo_hibp.png" alt="Screenshot of HaveIBeenPwned" 
+                                 class="w-full h-auto" 
+                                 onerror="this.parentElement.innerHTML='<p class=\'p-6 text-center text-gray-500\'>📸 Screenshot not available</p>'">
+                        </div>
+                    
+                </div>
+            
         </div>
 
         <!-- Data Sample -->
@@ -138,7 +146,43 @@ async function generateReport(summary, data) {
                 Sample of processed data (first 5 records, PII masked)
             </p>
             <div class="bg-white p-4 md:p-6 rounded-xl border border-gray-200 shadow-sm">
-                <pre class="code-block p-4 md:p-6 rounded-lg overflow-x-auto text-xs md:text-sm leading-relaxed">${JSON.stringify(data.slice(0, 5), null, 2)}</pre>
+                <pre class="code-block p-4 md:p-6 rounded-lg overflow-x-auto text-xs md:text-sm leading-relaxed">[
+  {
+    "id": 1,
+    "title": "Security vulnerability in authentication",
+    "content": "Contact me at jo******@example.com or call ***-***-4567",
+    "source": "Reddit",
+    "timestamp": "2025-11-09T18:49:46.559Z"
+  },
+  {
+    "id": 2,
+    "title": "Data breach at TechCorp",
+    "content": "Leaked data includes emails like ad***@techcorp.com and SSN ***-**-6789",
+    "source": "HaveIBeenPwned",
+    "timestamp": "2025-11-09T18:49:46.559Z"
+  },
+  {
+    "id": 3,
+    "title": "Security vulnerability in authentication",
+    "content": "Contact me at jo******@example.com or call ***-***-4567",
+    "source": "Reddit",
+    "timestamp": "2025-11-09T18:49:46.559Z"
+  },
+  {
+    "id": 4,
+    "title": "Cloud security best practices",
+    "content": "Credit card ****-****-****-9010 was exposed. IP: 192.168.***.***.***",
+    "source": "Forum",
+    "timestamp": "2025-11-09T18:49:46.559Z"
+  },
+  {
+    "id": 5,
+    "title": "New encryption standard released",
+    "content": "This is clean data without any PII",
+    "source": "Reddit",
+    "timestamp": "2025-11-09T18:49:46.559Z"
+  }
+]</pre>
             </div>
         </div>
 
@@ -190,21 +234,21 @@ async function generateReport(summary, data) {
                         <span class="flex-shrink-0 w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center font-bold mr-4">1</span>
                         <div>
                             <strong class="text-gray-900">Data Collection:</strong> 
-                            <span>Scraped ${summary.totalRecords} records from ${summary.sources.length} legal public sources</span>
+                            <span>Scraped 5 records from 2 legal public sources</span>
                         </div>
                     </li>
                     <li class="flex items-start">
                         <span class="flex-shrink-0 w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center font-bold mr-4">2</span>
                         <div>
                             <strong class="text-gray-900">Deduplication:</strong> 
-                            <span>Removed ${summary.duplicatesRemoved} duplicate entries</span>
+                            <span>Removed 0 duplicate entries</span>
                         </div>
                     </li>
                     <li class="flex items-start">
                         <span class="flex-shrink-0 w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center font-bold mr-4">3</span>
                         <div>
                             <strong class="text-gray-900">PII Detection:</strong> 
-                            <span>Scanned all records and detected PII in ${summary.piiDetected} entries</span>
+                            <span>Scanned all records and detected PII in 4 entries</span>
                         </div>
                     </li>
                     <li class="flex items-start">
@@ -228,7 +272,7 @@ async function generateReport(summary, data) {
         <!-- Footer -->
         <div class="bg-gray-800 text-white p-8 md:p-12 text-center">
             <p class="text-xl md:text-2xl font-bold mb-2">🛡️ Legal Data Acquisition System</p>
-            <p class="text-gray-400 text-sm mb-4">Report ID: ${timestamp}</p>
+            <p class="text-gray-400 text-sm mb-4">Report ID: 2025-11-09T18-49-46.563Z</p>
             <p class="text-gray-300 text-sm max-w-2xl mx-auto">
                 All data collected from public sources with respect for privacy and legal compliance
             </p>
@@ -236,10 +280,4 @@ async function generateReport(summary, data) {
     </div>
 </body>
 </html>
-  `;
-
-  await fs.writeFile(reportPath, html);
-  return reportPath;
-}
-
-module.exports = { generateReport };
+  
